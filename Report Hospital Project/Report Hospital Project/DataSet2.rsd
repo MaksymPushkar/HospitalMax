@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Diagnosis Date'[Date Id], 'Diagnosis Date'[Date], 'Dim Patient'[Patient Id], 'Dim Patient'[Full Name], 'Dim Disease'[Disease Id], 'Dim Disease'[Disease Name], "Rating", [Rating])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Diagnosis Date</DimensionName>
+                    <HierarchyName>Date Id</HierarchyName>
+                    <HierarchyUniqueName>[Diagnosis Date].[Date Id]</HierarchyUniqueName>
+                    <LevelName>Date Id</LevelName>
+                    <UniqueName>[Diagnosis Date].[Date Id].[Date Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Diagnosis Date</DimensionName>
+                    <HierarchyName>Date</HierarchyName>
+                    <HierarchyUniqueName>[Diagnosis Date].[Date]</HierarchyUniqueName>
+                    <LevelName>Date</LevelName>
+                    <UniqueName>[Diagnosis Date].[Date].[Date]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Patient</DimensionName>
+                    <HierarchyName>Patient Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Patient].[Patient Id]</HierarchyUniqueName>
+                    <LevelName>Patient Id</LevelName>
+                    <UniqueName>[Dim Patient].[Patient Id].[Patient Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Patient Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Patient</DimensionName>
+                    <HierarchyName>Full Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Patient].[Full Name]</HierarchyUniqueName>
+                    <LevelName>Full Name</LevelName>
+                    <UniqueName>[Dim Patient].[Full Name].[Full Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Full Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Disease</DimensionName>
+                    <HierarchyName>Disease Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Disease].[Disease Id]</HierarchyUniqueName>
+                    <LevelName>Disease Id</LevelName>
+                    <UniqueName>[Dim Disease].[Disease Id].[Disease Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Disease Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Disease</DimensionName>
+                    <HierarchyName>Disease Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Disease].[Disease Name]</HierarchyUniqueName>
+                    <LevelName>Disease Name</LevelName>
+                    <UniqueName>[Dim Disease].[Disease Name].[Disease Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Disease Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Rating</MeasureName>
+                    <UniqueName>[Measures].[Rating]</UniqueName>
+                  </ID>
+                  <ItemCaption>Rating</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Hospital DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Diagnosis Date'[Date Id], 'Diagnosis Date'[Date], 'Dim Patient'[Patient Id], 'Dim Patient'[Full Name], 'Dim Disease'[Disease Id], 'Dim Disease'[Disease Name], "Rating", [Rating])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Date_Id">
+        <DataField>Diagnosis Date[Date Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Patient_Id">
+        <DataField>Dim Patient[Patient Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Date">
+        <DataField>Diagnosis Date[Date]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Full_Name">
+        <DataField>Dim Patient[Full Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Disease_Id">
+        <DataField>Dim Disease[Disease Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Disease_Name">
+        <DataField>Dim Disease[Disease Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Rating">
+        <DataField>[Rating]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

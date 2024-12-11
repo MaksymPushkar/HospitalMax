@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet3">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Medication'[Medication Id], 'Dim Medication'[Medication Name], 'Dim Patient'[Patient Id], 'Dim Patient'[Full Name], 'Dim Patient'[Contraindications], "Rating", [Rating])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Medication</DimensionName>
+                    <HierarchyName>Medication Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Medication].[Medication Id]</HierarchyUniqueName>
+                    <LevelName>Medication Id</LevelName>
+                    <UniqueName>[Dim Medication].[Medication Id].[Medication Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Medication Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Medication</DimensionName>
+                    <HierarchyName>Medication Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Medication].[Medication Name]</HierarchyUniqueName>
+                    <LevelName>Medication Name</LevelName>
+                    <UniqueName>[Dim Medication].[Medication Name].[Medication Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Medication Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Patient</DimensionName>
+                    <HierarchyName>Patient Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Patient].[Patient Id]</HierarchyUniqueName>
+                    <LevelName>Patient Id</LevelName>
+                    <UniqueName>[Dim Patient].[Patient Id].[Patient Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Patient Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Patient</DimensionName>
+                    <HierarchyName>Full Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Patient].[Full Name]</HierarchyUniqueName>
+                    <LevelName>Full Name</LevelName>
+                    <UniqueName>[Dim Patient].[Full Name].[Full Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Full Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Patient</DimensionName>
+                    <HierarchyName>Contraindications</HierarchyName>
+                    <HierarchyUniqueName>[Dim Patient].[Contraindications]</HierarchyUniqueName>
+                    <LevelName>Contraindications</LevelName>
+                    <UniqueName>[Dim Patient].[Contraindications].[Contraindications]</UniqueName>
+                  </ID>
+                  <ItemCaption>Contraindications</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Rating</MeasureName>
+                    <UniqueName>[Measures].[Rating]</UniqueName>
+                  </ID>
+                  <ItemCaption>Rating</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Hospital DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Medication'[Medication Id], 'Dim Medication'[Medication Name], 'Dim Patient'[Patient Id], 'Dim Patient'[Full Name], 'Dim Patient'[Contraindications], "Rating", [Rating])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Medication_Id">
+        <DataField>Dim Medication[Medication Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Medication_Name">
+        <DataField>Dim Medication[Medication Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Patient_Id">
+        <DataField>Dim Patient[Patient Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Full_Name">
+        <DataField>Dim Patient[Full Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Contraindications">
+        <DataField>Dim Patient[Contraindications]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Rating">
+        <DataField>[Rating]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "MultidimensionalProjectHospital", "MultidimensionalProjectHospital\MultidimensionalProjectHospital.dwproj", "{0FEE48E9-C9BC-4A20-BF24-BC25912E5ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FEE48E9-C9BC-4A20-BF24-BC25912E5ECB}.Development|Default.ActiveCfg = Development
+		{0FEE48E9-C9BC-4A20-BF24-BC25912E5ECB}.Development|Default.Build.0 = Development
+		{0FEE48E9-C9BC-4A20-BF24-BC25912E5ECB}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {076E87D1-1F1D-4A0B-8724-2DC25CBA1701}
+	EndGlobalSection
+EndGlobal

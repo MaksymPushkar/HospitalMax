@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet5">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Medication'[Medication Id], 'Dim Medication'[Medication Name], 'Dim Doctor'[Doctor Id], 'Dim Doctor'[Full Name], 'Dim Doctor'[Specialization], "Fact Patient Treatment Count", [Fact Patient Treatment Count])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Medication</DimensionName>
+                    <HierarchyName>Medication Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Medication].[Medication Id]</HierarchyUniqueName>
+                    <LevelName>Medication Id</LevelName>
+                    <UniqueName>[Dim Medication].[Medication Id].[Medication Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Medication Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Medication</DimensionName>
+                    <HierarchyName>Medication Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Medication].[Medication Name]</HierarchyUniqueName>
+                    <LevelName>Medication Name</LevelName>
+                    <UniqueName>[Dim Medication].[Medication Name].[Medication Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Medication Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Doctor</DimensionName>
+                    <HierarchyName>Doctor Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Doctor].[Doctor Id]</HierarchyUniqueName>
+                    <LevelName>Doctor Id</LevelName>
+                    <UniqueName>[Dim Doctor].[Doctor Id].[Doctor Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Doctor Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Doctor</DimensionName>
+                    <HierarchyName>Full Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Doctor].[Full Name]</HierarchyUniqueName>
+                    <LevelName>Full Name</LevelName>
+                    <UniqueName>[Dim Doctor].[Full Name].[Full Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Full Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Doctor</DimensionName>
+                    <HierarchyName>Specialization</HierarchyName>
+                    <HierarchyUniqueName>[Dim Doctor].[Specialization]</HierarchyUniqueName>
+                    <LevelName>Specialization</LevelName>
+                    <UniqueName>[Dim Doctor].[Specialization].[Specialization]</UniqueName>
+                  </ID>
+                  <ItemCaption>Specialization</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Fact Patient Treatment Count</MeasureName>
+                    <UniqueName>[Measures].[Fact Patient Treatment Count]</UniqueName>
+                  </ID>
+                  <ItemCaption>Fact Patient Treatment Count</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Hospital DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Medication'[Medication Id], 'Dim Medication'[Medication Name], 'Dim Doctor'[Doctor Id], 'Dim Doctor'[Full Name], 'Dim Doctor'[Specialization], "Fact Patient Treatment Count", [Fact Patient Treatment Count])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Medication_Id">
+        <DataField>Dim Medication[Medication Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Medication_Name">
+        <DataField>Dim Medication[Medication Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Doctor_Id">
+        <DataField>Dim Doctor[Doctor Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Full_Name">
+        <DataField>Dim Doctor[Full Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Specialization">
+        <DataField>Dim Doctor[Specialization]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Fact_Patient_Treatment_Count">
+        <DataField>[Fact Patient Treatment Count]</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-21RFT4C_MAXSQL.HospitalDW"
+  DTS:DTSID="{65216236-86A0-4B2E-998F-63594A812A1F}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-21RFT4C\MAXSQL;Initial Catalog=HospitalDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Integration Services Project-{65216236-86A0-4B2E-998F-63594A812A1F}DESKTOP-21RFT4C\MAXSQL.HospitalDW;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
